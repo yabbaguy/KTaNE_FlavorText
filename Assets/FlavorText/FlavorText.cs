@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using System;
 
@@ -25,6 +26,7 @@ public class FlavorText : MonoBehaviour
     FlavorTextOption textOption;
     bool isActive = false;
     List<string> moduleNames;
+    bool starePresent = false;
     static int _moduleIdCounter = 1;
     int _moduleId = 0;
 
@@ -33,6 +35,15 @@ public class FlavorText : MonoBehaviour
         _moduleId = _moduleIdCounter++;
         textOptions = JsonConvert.DeserializeObject<List<FlavorTextOption>>(flavorTextJson.text);
         moduleNames = bombInfo.GetModuleNames();
+        Regex stareRegex = new Regex(@"[1-9][1-9][XOC][OC]");
+        foreach (string name in moduleNames)
+        {
+            Match match = stareRegex.Match(name);
+            if (match.Success)
+            {
+                starePresent = true;
+            }
+        }
         for (int i = 0; i < textOptions.Count; i++)
         {
             for (int j = i + 1; j < textOptions.Count; j++)
@@ -52,17 +63,17 @@ public class FlavorText : MonoBehaviour
         Debug.LogFormat("[Flavor Text #{0}] It's on.", _moduleId);
         textOption = textOptions[UnityEngine.Random.Range(0, textOptions.Count)];
         textDisplay.text = textOption.text;
-		if (textOption.text == "And here's the Countdown clock...")
-		{
-			Debug.LogFormat("[Flavor Text #{0}] It's looking for (Cruel) Countdown.", _moduleId);
-		}
-		else
-		{
-			Debug.LogFormat("[Flavor Text #{0}] It's looking for {1}.", _moduleId, textOption.name);
-		}
+        if (textOption.text == "And here's the Countdown clock...")
+        {
+            Debug.LogFormat("[Flavor Text #{0}] It's looking for (Cruel) Countdown.", _moduleId);
+        }
+        else
+        {
+            Debug.LogFormat("[Flavor Text #{0}] It's looking for {1}.", _moduleId, textOption.name);
+        }
         Debug.LogFormat("[Flavor Text #{0}] It said: {1}", _moduleId, textOption.text);
         Debug.LogFormat("[Flavor Text #{0}] Do you accept it?", _moduleId);
-        for(int i = 0; i < buttons.Count(); i++)
+        for (int i = 0; i < buttons.Count(); i++)
         {
             int j = i;
             buttons[i].OnInteract += delegate () { OnPress(j); return false; };
@@ -76,18 +87,18 @@ public class FlavorText : MonoBehaviour
         textOptions = JsonConvert.DeserializeObject<List<FlavorTextOption>>(flavorTextJson.text);
         textOption = textOptions[UnityEngine.Random.Range(0, textOptions.Count)];
         textDisplay.text = textOption.text;
-		if (textOption.text == "And here's the Countdown clock...")
-		{
-			Debug.LogFormat("[Flavor Text #{0}] It's looking for (Cruel) Countdown.", _moduleId);
-		}
-		else
-		{
-			Debug.LogFormat("[Flavor Text #{0}] It's looking for {1}.", _moduleId, textOption.name);
-		}
+        if (textOption.text == "And here's the Countdown clock...")
+        {
+            Debug.LogFormat("[Flavor Text #{0}] It's looking for (Cruel) Countdown.", _moduleId);
+        }
+        else
+        {
+            Debug.LogFormat("[Flavor Text #{0}] It's looking for {1}.", _moduleId, textOption.name);
+        }
         Debug.LogFormat("[Flavor Text #{0}] It said: {1}", _moduleId, textOption.text);
         Debug.LogFormat("[Flavor Text #{0}] Do you accept it?", _moduleId);
     }
-    
+
     void OnPress(int pressedButton)
     {
         GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
@@ -96,7 +107,7 @@ public class FlavorText : MonoBehaviour
         if (isActive)
         {
             Debug.LogFormat("[Flavor Text #{0}] You chose {1}to accept.", _moduleId, (pressedButton == 0) ? "not " : "");
-            if ((pressedButton > 0) == moduleNames.Contains(textOption.name))
+            if (((pressedButton > 0) == moduleNames.Contains(textOption.name)) || (pressedButton > 0 && textOption.name == "The Stare" && starePresent))
             {
                 Debug.LogFormat("[Flavor Text #{0}] Flavor Text was spared.", _moduleId);
                 textDisplay.text = "";
