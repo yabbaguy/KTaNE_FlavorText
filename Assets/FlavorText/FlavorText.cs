@@ -46,6 +46,11 @@ public class FlavorText : MonoBehaviour
         }
         for (int i = 0; i < textOptions.Count; i++)
         {
+            if (moduleNames.Contains("Needy " + textOptions[i].name))
+            {
+                moduleNames.Remove("Needy " + textOptions[i].name);
+                moduleNames.Add(textOptions[i].name);
+            }
             for (int j = i + 1; j < textOptions.Count; j++)
             {
                 if (textOptions[i].text == textOptions[j].text && moduleNames.Contains(textOptions[i].name))
@@ -107,7 +112,8 @@ public class FlavorText : MonoBehaviour
         if (isActive)
         {
             Debug.LogFormat("[Flavor Text #{0}] You chose {1}to accept.", _moduleId, (pressedButton == 0) ? "not " : "");
-            if (((pressedButton > 0) == moduleNames.Contains(textOption.name)) || (pressedButton > 0 && textOption.name == "The Stare" && starePresent))
+            if (((pressedButton > 0) == moduleNames.Contains(textOption.name)) ||
+                (pressedButton > 0 && textOption.name == "The Stare" && starePresent))
             {
                 Debug.LogFormat("[Flavor Text #{0}] Flavor Text was spared.", _moduleId);
                 textDisplay.text = "";
