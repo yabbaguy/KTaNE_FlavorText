@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using System;
+using System.Text.RegularExpressions;
 
 public class FlavorTextCruel : MonoBehaviour
 {
@@ -181,5 +182,152 @@ public class FlavorTextCruel : MonoBehaviour
         yield return new WaitForSeconds(1f);
         stage = 0;
         OnReactivate();
+    }
+
+    //twitch plays
+    private bool cmdIsValid1(string cmd)
+    {
+        char[] valids = { '1','2','3','4' };
+        if((cmd.Length >= 1) && (cmd.Length <= 4))
+        {
+            foreach(char c in cmd)
+            {
+                if (!valids.Contains(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private bool cmdIsValid2(string cmd)
+    {
+        int[] valids = { buttonNumbers[0], buttonNumbers[1], buttonNumbers[2], buttonNumbers[3] };
+        if ((cmd.Length >= 1) && (cmd.Length <= 4))
+        {
+            foreach (char c in cmd)
+            {
+                int test = (int)Char.GetNumericValue(c);
+                if (!valids.Contains(test))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    #pragma warning disable 414
+    private readonly string TwitchHelpMessage = @"!{0} position/pos/p 1234 [Presses the buttons from top to bottom] | !{0} label/lab/l 6805 [Presses the buttons labelled '6','8','0', then '5']";
+    #pragma warning restore 414
+
+    IEnumerator ProcessTwitchCommand(string command)
+    {
+        string[] parameters = command.Split(' ');
+        if (Regex.IsMatch(parameters[0], @"^\s*position\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant) || Regex.IsMatch(parameters[0], @"^\s*pos\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant) || Regex.IsMatch(parameters[0], @"^\s*p\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+        {
+            if(parameters.Length == 2)
+            {
+                if (cmdIsValid1(parameters[1]))
+                {
+                    yield return null;
+                    foreach (char c in parameters[1])
+                    {
+                        if (c.Equals('1'))
+                        {
+                            yield return new[] { buttons[0] };
+                        }
+                        else if (c.Equals('2'))
+                        {
+                            yield return new[] { buttons[1] };
+                        }
+                        else if (c.Equals('3'))
+                        {
+                            yield return new[] { buttons[2] };
+                        }
+                        else if (c.Equals('4'))
+                        {
+                            yield return new[] { buttons[3] };
+                        }
+                        yield return new WaitForSeconds(.1f);
+                    }
+                }
+            }
+            yield break;
+        }
+        if (Regex.IsMatch(parameters[0], @"^\s*label\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant) || Regex.IsMatch(parameters[0], @"^\s*lab\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant) || Regex.IsMatch(parameters[0], @"^\s*l\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+        {
+            if(parameters.Length == 2)
+            {
+                if (cmdIsValid2(parameters[1]))
+                {
+                    yield return null;
+                    foreach (char c in parameters[1])
+                    {
+                        if (c.Equals('1'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(1));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('2'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(2));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('3'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(3));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('4'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(4));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('5'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(5));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('6'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(6));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('7'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(7));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('8'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(8));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('9'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(9));
+                            yield return new[] { buttons[index] };
+                        }
+                        else if (c.Equals('0'))
+                        {
+                            int index = Array.FindIndex(buttonNumbers, x => x.Equals(0));
+                            yield return new[] { buttons[index] };
+                        }
+                        yield return new WaitForSeconds(.1f);
+                    }
+                }
+            }  
+            yield break;
+        }
     }
 }

@@ -16,10 +16,13 @@ MonoBehaviour:
   description: 'You have been made useful.
 
 
-    Module by DVD. Based off of "Crazy Talk" module by Perky.
+    Module by DVD, maintained by eXish. Based off of "Crazy Talk" module by Perky.
 
 
     moduleID: FlavorText, FlavorTextCruel
+
+
+    Twitch Plays supported (for both)
 
 
     Flavor Text Manual [HTML]: https://ktane.timwi.de/HTML/Flavor%20Text.html
@@ -29,6 +32,6 @@ MonoBehaviour:
     Flavor Text EX Manual [HTML]: https://ktane.timwi.de/HTML/Flavor%20Text%20EX.html
 
     Flavor Text EX Manual [PDF]: https://ktane.timwi.de/PDF/Flavor%20Text%20EX.pdf'
-  version: 1.0
+  version: 1.3
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 9b28aa6ee91d06c48bfdc50981d54004, type: 3}
