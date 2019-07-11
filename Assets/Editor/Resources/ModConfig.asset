@@ -13,7 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: FlavorTextMod
   title: Flavor Text
-  description: 'You have been made useful.
+  description: 'Link to the old Flavor Text (not maintained): https://steamcommunity.com/sharedfiles/filedetails/?id=1619285143
+
+
+    You have been made useful.
 
 
     Module by DVD, maintained by eXish. Based off of "Crazy Talk" module by Perky.
@@ -32,6 +35,6 @@ MonoBehaviour:
     Flavor Text EX Manual [HTML]: https://ktane.timwi.de/HTML/Flavor%20Text%20EX.html
 
     Flavor Text EX Manual [PDF]: https://ktane.timwi.de/PDF/Flavor%20Text%20EX.pdf'
-  version: 1.4
+  version: 1.5
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 9b28aa6ee91d06c48bfdc50981d54004, type: 3}
