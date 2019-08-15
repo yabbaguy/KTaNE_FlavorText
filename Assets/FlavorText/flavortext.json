@@ -1800,6 +1800,12 @@
     "text": "\"What do you mean, 'I never listen to you'? Wait, which button again?\""
   },
   {
+    "name": "Needy Piano",
+    "steam_id": 1826497972,
+    "module_id": "needyPiano",
+    "text": "This module puts a whole new light on the saying \"taking notes\"."
+  },
+  {
     "name": "Neutralization",
     "steam_id": 889942198,
     "module_id": "neutralization",
