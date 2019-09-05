@@ -102,6 +102,12 @@
     "text": "Part of a well-balanced breakfast!"
   },
   {
+    "name": "A-maze-ing Buttons",
+    "steam_id": 1853561507,
+    "module_id": "ksmAmazeingButtons",
+    "text": "What's so amazing about these buttons? I've been pressing ones just like them for ages!"
+  },
+  {
     "name": "A Mistake",
     "steam_id": 1756573088,
     "module_id": "MistakeModule",
@@ -198,6 +204,12 @@
     "text": "Who said that a circle was pointless?"
   },
   {
+    "name": "Binary",
+    "steam_id": 1836670622,
+    "module_id": "Binary",
+    "text": "Strange, but these codes are easy and impossible at the same time."
+  },
+  {
     "name": "Binary LEDs",
     "steam_id": 949930700,
     "module_id": "BinaryLeds",
@@ -276,6 +288,12 @@
     "text": "Like a guide, pointing at the completely wrong thing."
   },
   {
+    "name": "Bob Barks",
+    "steam_id": 1841238580,
+    "module_id": "ksmBobBarks",
+    "text": "Bob, do I have all five stages right?"
+  },
+  {
     "name": "Boggle",
     "steam_id": 1510336621,
     "module_id": "boggle",
@@ -286,6 +304,12 @@
     "steam_id": 1792010255,
     "module_id": "bombDiffusal",
     "text": "Remember kids: diffuse is to, \"spread or cause to spread over a wide area or among a large number of people\", and defuse is \"to remove the fuse from (an explosive device) in order to prevent it from exploding.\" Learn the difference. Spread the truth. And don’t make that mistake."
+  },
+  {
+    "name": "Bone Apple Tea",
+    "steam_id": 1847317926,
+    "module_id": "boneAppleTea",
+    "text": "Ah yes, synonym rolls... Just like grammar used to make."
   },
   {
     "name": "Book of Mario Thousands of Doors",
@@ -466,6 +490,12 @@
     "steam_id": 751202722,
     "module_id": "ChessModule",
     "text": "Under pressure, chess can feel more like a game of battleships."
+  },
+  {
+    "name": "Chord Progressions",
+    "steam_id": 1838172595,
+    "module_id": "chordProgressions",
+    "text": "Who knew this bomb's manufacturer would be so into music theory."
   },
   {
     "name": "Chord Qualities",
@@ -696,6 +726,18 @@
     "text": "Why the zeros are red, I remember them yellow?"
   },
   {
+    "name": "Cryptic Cycle",
+    "steam_id": 1847188104,
+    "module_id": "crypticCycle",
+    "text": "This module is as ??????????? as it looks."
+  },
+  {
+    "name": "Cryptic Password",
+    "steam_id": 1746664119,
+    "module_id": "CrypticPassword",
+    "text": "Why do you need to encrypt your password? It's not PASSWORD, is it?"
+  },
+  {
     "name": "Cryptography",
     "steam_id": 751147696,
     "module_id": "CryptModule",
@@ -784,6 +826,12 @@
     "steam_id": 1702555328,
     "module_id": "digitString",
     "text": "Terror has arrived in town, for some of your digits... are actually a sign!!"
+  },
+  {
+    "name": "Disordered Keys",
+    "steam_id": 1789372014,
+    "module_id": "disorderedKeys",
+    "text": "T???? ???s ???? ? 1????? Ði??????t. D?? ???? ?ø?? ?????t?"
   },
   {
     "name": "Discolored Squares",
@@ -996,6 +1044,12 @@
     "text": "I hope you're good at geography as this is a flag quiz that doesn't make any sense!"
   },
   {
+    "name": "Flash Memory",
+    "steam_id": 1853309014,
+    "module_id": "FlashMemory",
+    "text": "Why is the lightning bolt sideways?"
+  },
+  {
     "name": "Flashing Lights",
     "steam_id": 1469292731,
     "module_id": "flashingLights",
@@ -1060,6 +1114,12 @@
     "steam_id": 743198269,
     "module_id": "MemoryV2",
     "text": "This one likes attention, but not too much attention."
+  },
+  {
+    "name": "Forget Me Now",
+    "steam_id": 1844292544,
+    "module_id": "ForgetMeNow",
+    "text": "No, this is not a boss module. Stop being judgemental."
   },
   {
     "name": "Forget Perspective",
@@ -1248,10 +1308,22 @@
     "text": "Desecrate this module at your own risk. Death will come on swift wings to whomsoever fails to disarm it..."
   },
   {
+    "name": "Hill Cycle",
+    "steam_id": 1837378649,
+    "module_id": "hillCycle",
+    "text": "Not the kind you need a mountain bike for."
+  },
+  {
     "name": "Hogwarts",
     "steam_id": 1607221836,
     "module_id": "HogwartsModule",
     "text": "Alohomora! ... Hm, why doesn't that solve the module?"
+  },
+  {
+    "name": "Hold Up's",
+    "steam_id": 1851658953,
+    "module_id": "KritHoldUps",
+    "text": "Well then, let's do the first step: Knock all the enemies down, and do a Hold Up!"
   },
   {
     "name": "Homophones",
@@ -1342,6 +1414,12 @@
     "steam_id": 1307648687,
     "module_id": "iPhone",
     "text": "Somebody has welded a smart phone onto a bomb. Nobody tell Apple - it's probably a crime in certain states."
+  },
+  {
+    "name": "Jack Attack",
+    "steam_id": 1832034091,
+    "module_id": "jackAttack",
+    "text": "Remember the clue..."
   },
   {
     "name": "The Jack-O’-Lantern",
@@ -1572,6 +1650,12 @@
     "text": "Let's see here, 96 + 3 = 99. Oh god."
   },
   {
+    "name": "Matchematics",
+    "steam_id": 1839930546,
+    "module_id": "matchematics",
+    "text": "Can you make the match?"
+  },
+  {
     "name": "Mastermind Simple",
     "steam_id": 1102360624,
     "module_id": "Mastermind Simple",
@@ -1582,6 +1666,12 @@
     "steam_id": 1102363790,
     "module_id": "Mastermind Cruel",
     "text": "The game from your childhood. Only advanced. And harder to memorize. And the feedback isn't what it used to be..."
+  },
+  {
+    "name": "Masyu",
+    "steam_id": 1850003378,
+    "module_id": "masyuModule ",
+    "text": "Just some dots and lines, really."
   },
   {
     "name": "Math",
@@ -1792,6 +1882,12 @@
     "steam_id": 1688518678,
     "module_id": "necronomicon",
     "text": "Ph’nglui mglw’nafh Cthulhu R’lyeh wgah’nagl fhtagn."
+  },
+  {
+    "name": "Needlessly Complicated Button",
+    "steam_id": 1837163865,
+    "module_id": "needlesslyComplicatedButton",
+    "text": "Three indicators and a button? What could possibly go wrong?"
   },
   {
     "name": "Needy Mrs Bob",
@@ -2142,6 +2238,12 @@
     "text": "I think you get the point now."
   },
   {
+    "name": "Red Cipher",
+    "steam_id": 1852030206,
+    "module_id": "redCipher",
+    "text": "Seeing red is the standard for this module."
+  },
+  {
     "name": "Refill that Beer!",
     "steam_id": 1143527507,
     "module_id": "NeedyBeer",
@@ -2194,6 +2296,12 @@
     "steam_id": 1743337361,
     "module_id": "riskyWires",
     "text": "Gambling problem? Call 1-800-GAMBLER."
+  },
+  {
+    "name": "Robot Programming",
+    "steam_id": 1840665855,
+    "module_id": "robotProgramming",
+    "text": "Every kids fantasy job is now your adult nightmare. Just try not to ‘crash’ the program."
   },
   {
     "name": "Rock-Paper-Scissors-L.-Sp.",
@@ -2334,6 +2442,12 @@
     "text": "Sassy Sally said sorry since soggy Steven slurped soup."
   },
   {
+    "name": "Simon Literally Says",
+    "steam_id": 1846790533,
+    "module_id": "ksmSimonLitSays",
+    "text": "Look, Simon's tired of shrieking and screaming to get your attention. He just wants you to listen to him, and nobody else!"
+  },
+  {
     "name": "Simon Samples",
     "steam_id": 1462370946,
     "module_id": "simonSamples",
@@ -2356,6 +2470,12 @@
     "steam_id": 822349841,
     "module_id": "SimonScreamsModule",
     "text": "He's angry! He's furious! He's enraged! He's had it!"
+  },
+  {
+    "name": "Simon Selects",
+    "steam_id": 1844662069,
+    "module_id": "simonSelectsModule",
+    "text": "Why is he smiling at me?"
   },
   {
     "name": "Simon Sends",
@@ -2422,6 +2542,12 @@
     "steam_id": 1742229763,
     "module_id": "simonStores",
     "text": "Calculators at the ready..."
+  },
+  {
+    "name": "Simon's On First",
+    "steam_id": 1843472944,
+    "module_id": "simonsOnFirst",
+    "text": "Simon says purple. Red? No, I said purple. I know, it’s red. No, it’s purple... (repeat ad infinitum)"
   },
   {
     "name": "Simon's Sequence",
@@ -2832,6 +2958,12 @@
     "text": "All ciphering techniques are required to solve this module."
   },
   {
+    "name": "Ultimate Cycle",
+    "steam_id": 1837951554,
+    "module_id": "ultimateCycle",
+    "text": "How much security does one word need?"
+  },
+  {
     "name": "The Ultracube",
     "steam_id": 1779022644,
     "module_id": "TheUltracubeModule",
@@ -2926,6 +3058,12 @@
     "steam_id": 897610745,
     "module_id": "webDesign",
     "text": "Welcome to web design class. The first rule of web design is: You do not talk about Comic Sans MS. The second rule is: You DO NOT talk about Comic Sans MS. The third rule is: The word \"color\" is NEVER spelled with a U."
+  },
+  {
+    "name": "Weird Al Yankovic",
+    "steam_id": 1843596920,
+    "module_id": "weirdAlYankovic",
+    "text": "Are you White and Nerdy enough for this module?"
   },
   {
     "name": "Westeros",
