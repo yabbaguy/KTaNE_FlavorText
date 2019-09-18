@@ -26,6 +26,7 @@ public class FlavorText : MonoBehaviour
     List<FlavorTextOption> textOptions;
     FlavorTextOption textOption;
     bool isActive = false;
+    bool beSpecial = false;
     List<string> moduleNames;
     bool starePresent = false;
     static int _moduleIdCounter = 1;
@@ -71,6 +72,7 @@ public class FlavorText : MonoBehaviour
         textDisplay.text = textOption.text;
         if (textOption.text == "And here's the Countdown clock...")
         {
+            beSpecial = true;
             Debug.LogFormat("[Flavor Text #{0}] It's looking for (Cruel) Countdown.", _moduleId);
         }
         else
@@ -88,6 +90,7 @@ public class FlavorText : MonoBehaviour
 
     void OnReactivate()
     {
+        beSpecial = false;
         isActive = true;
         Debug.LogFormat("[Flavor Text #{0}] It's back on.", _moduleId);
         textOptions = JsonConvert.DeserializeObject<List<FlavorTextOption>>(flavorTextJson.text);
@@ -95,6 +98,7 @@ public class FlavorText : MonoBehaviour
         textDisplay.text = textOption.text;
         if (textOption.text == "And here's the Countdown clock...")
         {
+            beSpecial = true;
             Debug.LogFormat("[Flavor Text #{0}] It's looking for (Cruel) Countdown.", _moduleId);
         }
         else
@@ -114,7 +118,7 @@ public class FlavorText : MonoBehaviour
         {
             Debug.LogFormat("[Flavor Text #{0}] You chose {1}to accept.", _moduleId, (pressedButton == 0) ? "not " : "");
             if (((pressedButton > 0) == moduleNames.Contains(textOption.name)) ||
-                (pressedButton > 0 && textOption.name == "The Stare" && starePresent))
+                (pressedButton > 0 && textOption.name == "The Stare" && starePresent) || ((pressedButton > 0) && beSpecial && (moduleNames.Contains("Countdown") || moduleNames.Contains("Cruel Countdown"))))
             {
                 Debug.LogFormat("[Flavor Text #{0}] Flavor Text was spared.", _moduleId);
                 textDisplay.text = "";
