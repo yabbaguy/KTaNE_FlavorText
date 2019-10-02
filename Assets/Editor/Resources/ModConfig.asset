@@ -35,6 +35,6 @@ MonoBehaviour:
     Flavor Text EX Manual [HTML]: https://ktane.timwi.de/HTML/Flavor%20Text%20EX.html
 
     Flavor Text EX Manual [PDF]: https://ktane.timwi.de/PDF/Flavor%20Text%20EX.pdf'
-  version: 1.6.9
+  version: 1.7.0
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 9b28aa6ee91d06c48bfdc50981d54004, type: 3}
